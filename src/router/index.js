@@ -16,6 +16,7 @@ export default new Router({
   mode: 'history',
   routes: [
     { path: '/', component: Top },
+    { path: '/top', component: Top },
     { path: '/class_a', component: Class_a },
     { path: '/class_b', component: Class_b },
     { path: '/class_c', component: Class_c },
