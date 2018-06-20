@@ -13,8 +13,10 @@ export default new Router({
   routes: [
     { path: '/', component: Top },
     { path: '/top', component: Top },
+    { path: '/class/5/5', redirect: '/result' },
+    { path: '/class/6/0', redirect: '/result' },
     { path: '/class/:class/:id', name: Class, component: Class },
-    { path: '/result/', component: Result },
+    { path: '/result', component: Result },
     { path: '/share', component: Share }
   ]
 });

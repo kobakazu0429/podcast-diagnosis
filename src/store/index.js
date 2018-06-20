@@ -12,6 +12,12 @@ export default new Vuex.Store({
     updateChecked: (state, obj) => {
       state['class'][obj.dir1][obj.dir2].boolean = obj.value;
     },
+    setName: (state, text) => {
+      state.name = text;
+    },
+    countClass: (state, arr) => {
+      state.result_data = arr;
+    },
     nextPageURL: (state, arr) => {
       state.nextPage[0] = arr[0];
       state.nextPage[1] = arr[1];

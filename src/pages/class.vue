@@ -4,13 +4,23 @@
       :group="this.$store.state.class[this.$route.params.class][this.$route.params.id]"
       :next-page-arr="this.$store.state.nextPage"/>
 
-    <br>
+    <div class="wrapper">
+      <router-link
+        :to="{params : {class: this.$store.state.previousPage[0], id: this.$store.state.previousPage[1]}}"
+        class="arrow-left square_btn"
+      >
+        <i class="fas fa-angle-left"/>
+        前へ
+      </router-link>
 
-    <router-link :to="{params : {class: this.$store.state.previousPage[0], id: this.$store.state.previousPage[1]}}">前へ</router-link>
-
-    <br>
-
-    <router-link :to="{params : {class: this.$store.state.nextPage[0], id: this.$store.state.nextPage[1]}}">次へ</router-link>
+      <router-link
+        :to="{params : {class: this.$store.state.nextPage[0], id: this.$store.state.nextPage[1]}}"
+        class="arrow-right square_btn"
+      >
+        次へ
+        <i class="fas fa-angle-right"/>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -24,47 +34,49 @@ export default {
   },
   methods: {
     getNextPageURL() {
-      if (this.$route.params.id < 5) {
-        return [this.$route.params.class, Number(this.$route.params.id) + 1];
+      if (Number(this.$route.params.id) < 4) {
+        return [Number(this.$route.params.class), Number(this.$route.params.id) + 1];
       } else {
-        switch (this.$route.params.class) {
-        case 'a':
-          return ['b', 1];
-        case 'b':
-          return ['c', 1];
-        case 'c':
-          return ['d', 1];
-        case 'd':
-          return ['e', 1];
-        case 'e':
-          return ['f', 1];
-        case 'f':
-          return ['g', 1];
+        switch (Number(this.$route.params.class)) {
+        case 0:
+          return [1, 0];
+        case 1:
+          return [2, 0];
+        case 2:
+          return [3, 0];
+        case 3:
+          return [4, 0];
+        case 4:
+          return [5, 0];
+        case 5:
+          return [6, 0];
         default:
           break;
         }
       }
     },
     getPreviousPageURL() {
-      if (this.$route.params.id === 1) {
-        switch (this.$route.params.class) {
-        case 'a':
-          return ['a', 1];
-        case 'b':
-          return ['a', 5];
-        case 'c':
-          return ['b', 5];
-        case 'd':
-          return ['c', 5];
-        case 'e':
-          return ['d', 5];
-        case 'f':
-          return ['e', 5];
+      if (Number(this.$route.params.id) === 0) {
+        switch (Number(this.$route.params.class)) {
+        case 0:
+          return [0, 0];
+        case 1:
+          return [0, 4];
+        case 2:
+          return [1, 4];
+        case 3:
+          return [2, 4];
+        case 4:
+          return [3, 4];
+        case 5:
+          return [4, 4];
+        case 6:
+          return [5, 4];
         default:
           break;
         }
       } else {
-        return [this.$route.params.class, Number(this.$route.params.id) - 1];
+        return [Number(this.$route.params.class), Number(this.$route.params.id) - 1];
       }
     }
   }
@@ -72,4 +84,35 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  text-align: center;
+  margin-top: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  margin: 0 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+a:visited {
+  color: black;
+}
+
+.square_btn {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+.square_btn:hover {
+  background: #67c5ff;
+  color: white;
+}
 </style>
