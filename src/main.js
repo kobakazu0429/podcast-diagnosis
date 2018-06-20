@@ -3,14 +3,6 @@ import App from './App';
 import router from './router';
 import store from './store';
 
-import '@fortawesome/fontawesome-free-webfonts/css/fontawesome.css';
-
-import '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css';
-import '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css';
-import '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css';
-
-// import '../node_modules/normalize.css/normalize.css';
-
 Vue.config.productionTip = false;
 Vue.config.devtools = false;
 

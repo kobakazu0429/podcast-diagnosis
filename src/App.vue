@@ -16,6 +16,7 @@ export default {
 <style>
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
 @import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+@import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
 
 html,
 body,
