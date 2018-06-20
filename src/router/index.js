@@ -9,7 +9,6 @@ import Share from '@/pages/share';
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
   routes: [
     { path: '/', component: Top },
     { path: '/top', component: Top },
