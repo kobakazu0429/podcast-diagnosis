@@ -1,37 +1,33 @@
 <template>
   <div class="classWrapper">
-    <div class="center">
-      <h3>質問</h3>
-    </div>
+    <h3>質問</h3>
     <p>{{ group.text }}</p>
-    <div class="center">
-      <div class="buttonWrapper">
-        <input
-          id="yes"
-          name="toggle"
-          type="radio"
-          value="true"
-          @change="updateChecked(group.dir1, group.dir2, $event.target.value)"
-          @click="moveNextPage(nextPageArr)"
-        >
-        <label
-          for="yes"
-          class="yes"
-        >Yes</label>
+    <div class="buttonWrapper">
+      <input
+        id="yes"
+        name="toggle"
+        type="radio"
+        value="true"
+        @change="updateChecked(group.dir1, group.dir2, $event.target.value)"
+        @click="moveNextPage(nextPageArr)"
+      >
+      <label
+        for="yes"
+        class="yes"
+      >Yes</label>
 
-        <input
-          id="no"
-          name="toggle"
-          type="radio"
-          value="false"
-          @change="updateChecked(group.dir1, group.dir2, $event.target.value)"
-          @click="moveNextPage(nextPageArr)"
-        >
-        <label
-          for="no"
-          class="no"
-        >No</label>
-      </div>
+      <input
+        id="no"
+        name="toggle"
+        type="radio"
+        value="false"
+        @change="updateChecked(group.dir1, group.dir2, $event.target.value)"
+        @click="moveNextPage(nextPageArr)"
+      >
+      <label
+        for="no"
+        class="no"
+      >No</label>
     </div>
   </div>
 </template>
@@ -76,18 +72,17 @@ h3 {
 p {
   margin-bottom: 100px;
   min-height: 50px;
+  display: inline-block;
+  text-align: left
 }
 
 .classWrapper {
   margin: 40px;
+  text-align: center
 }
 
 .buttonWrapper {
   margin: 0 -10px;
-}
-
-.center {
-  text-align: center
 }
 
 .yes {
