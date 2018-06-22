@@ -66,31 +66,33 @@ export default {
 h3 {
   font-size: 30px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 p {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   min-height: 50px;
   display: inline-block;
   text-align: left
 }
 
 .classWrapper {
-  margin: 40px;
+  margin: 0 40px 100px 40px;
   text-align: center
 }
 
 .buttonWrapper {
-  margin: 0 -10px;
+  margin: -10px 0;
 }
 
 .yes {
   background-color: #e0f3ff;
+  margin-right: 5px;
 }
 
 .no {
   background-color: #ffe0d5;
+  margin-left: 5px;
 }
 
 input[type='radio'] {
@@ -98,12 +100,11 @@ input[type='radio'] {
 }
 
 label {
-  width: 50px;
-  height: 20px;
+  width: 10vw;
+  height: 5vw;
   padding: 10px 40px;
   border: 1px solid #707070;
   border-radius: 10px;
-  margin: 10px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;

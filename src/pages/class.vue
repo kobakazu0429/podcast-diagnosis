@@ -87,11 +87,11 @@ export default {
 
 <style scoped>
 .wrapper {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 a {
