@@ -1,33 +1,37 @@
 <template>
   <div class="classWrapper">
-    <h3>質問</h3>
+    <div class="center">
+      <h3>質問</h3>
+    </div>
     <p>{{ group.text }}</p>
-    <div class="buttonWrapper">
-      <input
-        id="yes"
-        name="toggle"
-        type="radio"
-        value="true"
-        @change="updateChecked(group.dir1, group.dir2, $event.target.value)"
-        @click="moveNextPage(nextPageArr)"
-      >
-      <label
-        for="yes"
-        class="yes"
-      >Yes</label>
+    <div class="center">
+      <div class="buttonWrapper">
+        <input
+          id="yes"
+          name="toggle"
+          type="radio"
+          value="true"
+          @change="updateChecked(group.dir1, group.dir2, $event.target.value)"
+          @click="moveNextPage(nextPageArr)"
+        >
+        <label
+          for="yes"
+          class="yes"
+        >Yes</label>
 
-      <input
-        id="no"
-        name="toggle"
-        type="radio"
-        value="false"
-        @change="updateChecked(group.dir1, group.dir2, $event.target.value)"
-        @click="moveNextPage(nextPageArr)"
-      >
-      <label
-        for="no"
-        class="no"
-      >No</label>
+        <input
+          id="no"
+          name="toggle"
+          type="radio"
+          value="false"
+          @change="updateChecked(group.dir1, group.dir2, $event.target.value)"
+          @click="moveNextPage(nextPageArr)"
+        >
+        <label
+          for="no"
+          class="no"
+        >No</label>
+      </div>
     </div>
   </div>
 </template>
@@ -80,6 +84,10 @@ p {
 
 .buttonWrapper {
   margin: 0 -10px;
+}
+
+.center {
+  text-align: center
 }
 
 .yes {

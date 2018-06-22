@@ -1,25 +1,27 @@
 <template>
   <div>
-    <checkbox-button
-      :group="this.$store.state.class[this.$route.params.class][this.$route.params.id]"
-      :next-page-arr="this.$store.state.nextPage"/>
-
     <div class="wrapper">
-      <router-link
-        :to="{params : {class: this.$store.state.previousPage[0], id: this.$store.state.previousPage[1]}}"
-        class="arrow-left square_btn"
-      >
-        <i class="fas fa-angle-left"/>
-        前へ
-      </router-link>
+      <checkbox-button
+        :group="this.$store.state.class[this.$route.params.class][this.$route.params.id]"
+        :next-page-arr="this.$store.state.nextPage"/>
 
-      <router-link
-        :to="{params : {class: this.$store.state.nextPage[0], id: this.$store.state.nextPage[1]}}"
-        class="arrow-right square_btn"
-      >
-        次へ
-        <i class="fas fa-angle-right"/>
-      </router-link>
+      <div class="center">
+        <router-link
+          :to="{params : {class: this.$store.state.previousPage[0], id: this.$store.state.previousPage[1]}}"
+          class="arrow-left square_btn"
+        >
+          <i class="fas fa-angle-left"/>
+          前へ
+        </router-link>
+
+        <router-link
+          :to="{params : {class: this.$store.state.nextPage[0], id: this.$store.state.nextPage[1]}}"
+          class="arrow-right square_btn"
+        >
+          次へ
+          <i class="fas fa-angle-right"/>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -85,8 +87,11 @@ export default {
 
 <style scoped>
 .wrapper {
-  text-align: center;
   margin-top: 100px;
+}
+
+.center {
+    text-align: center;
 }
 
 a {
