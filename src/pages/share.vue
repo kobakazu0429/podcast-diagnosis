@@ -21,7 +21,7 @@
         <p>F : ボイスコンテンツ・朗読</p>
       </div>
       <a
-        :href="'https://twitter.com/intent/tweet?via=cho_kure&hashtags=ちょっくれ&text=私のPodcast診断結果です。%0dもしかしてちょっくれに出演した方がいいかも？%0d結果はココから : &url='+returnLink()+'%0d'"
+        :href="'https://twitter.com/intent/tweet?via=cho_kure&hashtags=ちょっくれ&text=私のPodcast診断結果です。%0dもしかしてちょっくれに出演した方がいいかも？%0d結果はココから : &url='+returnLink()"
         target="_blank"
         class="square_btn">
         ツイート
