@@ -45,7 +45,7 @@ export default {
   methods: {
     returnLink() {
       return encodeURIComponent(
-        'https://kobakazu0429.github.io/podcast-diagnosis/%23' + this.$router.currentRoute.fullPath
+        'https://kobakazu0429.github.io/podcast-diagnosis/#' + this.$router.currentRoute.fullPath
       );
     },
     retrunResult(hex) {
