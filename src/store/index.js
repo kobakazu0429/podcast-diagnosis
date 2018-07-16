@@ -15,6 +15,9 @@ export default new Vuex.Store({
     setName: (state, text) => {
       state.name = text;
     },
+    setShareUrl: (state, url) => {
+      state.share_url = url;
+    },
     countClass: (state, arr) => {
       state.result_data = arr;
     },

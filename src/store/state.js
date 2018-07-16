@@ -104,8 +104,7 @@ export const state = {
         boolean: false
       },
       {
-        text:
-          'Podcastの相方にできる、素直でリアクションの良い人間の心当たりがある',
+        text: 'Podcastの相方にできる、素直でリアクションの良い人間の心当たりがある',
         dir1: 2,
         dir2: 4,
         name: 'class_c_5',
@@ -224,7 +223,8 @@ export const state = {
       }
     ]
   ],
-  result_data: [1, 1, 1, 1, 1, 1],
+  result_data: [0, 0, 0, 0, 0, 0],
+  share_url: 'https://kobakazu0429.github.io/podcast-diagnosis/',
   name: '名無し',
   nextPage: [0, 1],
   previousPage: [0, 0]

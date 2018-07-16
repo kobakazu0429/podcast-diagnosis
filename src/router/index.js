@@ -16,6 +16,6 @@ export default new Router({
     { path: '/class/6/0', redirect: '/result' },
     { path: '/class/:class/:id', name: Class, component: Class },
     { path: '/result', component: Result },
-    { path: '/share', component: Share }
+    { path: '/share/:name/:result', component: Share }
   ]
 });
