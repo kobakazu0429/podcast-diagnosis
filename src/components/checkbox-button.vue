@@ -46,7 +46,7 @@ export default {
     }
   },
   watch: {
-    '$route' () {
+    $route() {
       document.getElementById('yes').checked = false;
       document.getElementById('no').checked = false;
     }
@@ -73,12 +73,12 @@ p {
   margin-bottom: 80px;
   min-height: 50px;
   display: inline-block;
-  text-align: left
+  text-align: left;
 }
 
 .classWrapper {
   margin: 0 40px 100px 40px;
-  text-align: center
+  text-align: center;
 }
 
 .buttonWrapper {
@@ -101,6 +101,7 @@ input[type='radio'] {
 
 label {
   width: 10vw;
+  max-height: 30px;
   height: 5vw;
   padding: 10px 40px;
   border: 1px solid #707070;

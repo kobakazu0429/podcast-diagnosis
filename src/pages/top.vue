@@ -37,12 +37,12 @@ div {
 }
 
 h1 {
-  font-size: 9vw;
+  font-size: calc(20px + 3vw);
   margin-top: 50px;
 }
 
 h3 {
-  font-size: 4vw;
+  font-size: calc(20px + 1vw);
   margin-top: 30px;
 }
 
