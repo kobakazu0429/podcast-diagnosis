@@ -3,11 +3,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:vue/recommended',
-    'plugin:vue/essential'
-  ],
+  extends: ['eslint:recommended', 'plugin:vue/recommended', 'plugin:vue/essential'],
   plugins: ['vue'],
   parserOptions: {
     parser: 'babel-eslint',
@@ -16,8 +12,8 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
-    indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
+    indent: [0, 'space'],
     quotes: ['error', 'single'],
     semi: ['error', 'always']
   }
