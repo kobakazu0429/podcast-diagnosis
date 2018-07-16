@@ -44,9 +44,9 @@ export default {
   },
   methods: {
     returnLink() {
-      return encodeURIComponent(
-        'https://kobakazu0429.github.io/podcast-diagnosis/#' + this.$router.currentRoute.fullPath
-      );
+      // return encodeURIComponent(
+      return 'https://kobakazu0429.github.io/podcast-diagnosis/#' + this.$router.currentRoute.fullPath;
+      // );
     },
     retrunResult(hex) {
       let dec = String(parseInt(hex, 16));
